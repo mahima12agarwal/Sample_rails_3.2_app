@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyScrapbook</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    "blueprint/screen", :media => "screen" %>
+  <%= stylesheet_link_tag    "blueprint/print", :media => "print" %>
+  <%= stylesheet_link_tag    'custom', :media => 'screen' %>
+
+</head>
+<body>
+<body>
+    <div class="container">
+      <header>
+        <%= image_tag("rails.png", :alt => "Sample App", :class => "round") %>
+		
+        <nav class="round">
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About Us", about_path %></li>
+            <li><%= link_to "Posts", posts_path %></li>
+			 <li><%= link_to "New Post", new_post_path %></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="round">
+        <%= yield %>
+      </section>
+    </div>
+  </body>
+</body>
+</html>
